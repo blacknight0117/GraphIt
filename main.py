@@ -17,6 +17,7 @@ MEDRED = [150, 0, 0]
 DEFAULTBG = BLACK
 DEFAULT = WHITE
 
+
 #does everything for now
 def main():
     fileName = input('Input save file name')
