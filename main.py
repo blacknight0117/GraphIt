@@ -23,11 +23,14 @@ MEDRED = [150, 0, 0]
 DEFAULTBG = BLACK
 DEFAULT = WHITE
 
+FONT = pygame.font.Font('courier.ttf', 12)
+TITLEFONT = pygame.font.Font('courier.ttf', 16)
+
 
 #does everything for now
 def main():
     global fileBackup
-    #This looks to see if
+    #This looks to see if there was an early quit before
     cntr = 0
     while True:
         if os.path.exists('temp'+str(cntr)+'.txt'):
@@ -67,6 +70,7 @@ class Block():
         self.colorText = DEFAULT        # Default Black
         self.colorBorder = self.colorText
         self.arrows = []
+        self.rect = None
         #TODO: Arrows: Figure out Implementation
         self.Setup(aLine)
 
@@ -137,6 +141,13 @@ class Graph():
             self.blockList[i].PrintToFile(aFile)
             #TODO: Arrows: Print to SaveFile
 
+
+def ToPixel():
+    pass
+
+def ToBlock():
+    #Block = 6 chars right, 1 tall
+    pass
 
 def Terminate():
     pygame.quit()
